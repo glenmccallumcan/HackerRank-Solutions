@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimumSwaps2", "MinimumSwaps2\MinimumSwaps2.csproj", "{72F428A6-2401-47C4-AC66-158473EFC892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimumSwaps2.UnitTests", "MinimumSwaps2.UnitTests\MinimumSwaps2.UnitTests.csproj", "{83BE14DB-9B87-41A7-9CFF-529FC7436F72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72F428A6-2401-47C4-AC66-158473EFC892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72F428A6-2401-47C4-AC66-158473EFC892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72F428A6-2401-47C4-AC66-158473EFC892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72F428A6-2401-47C4-AC66-158473EFC892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83BE14DB-9B87-41A7-9CFF-529FC7436F72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83BE14DB-9B87-41A7-9CFF-529FC7436F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83BE14DB-9B87-41A7-9CFF-529FC7436F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83BE14DB-9B87-41A7-9CFF-529FC7436F72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF58D34D-5DF1-48EF-88AC-F3E213799EB5}
+	EndGlobalSection
+EndGlobal
