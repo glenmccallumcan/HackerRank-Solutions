@@ -6,17 +6,15 @@ namespace MinimumSwaps2.UnitTests
 {
     public class SolutionTests
     {
-        public class TheMinimumSwapsMethod
+        public class TheMinimumSwaps2Method
         {
-            
-
             [Theory]
             [InlineData(new int[] { 4, 3, 1, 2 }, 3)]
             [InlineData(new int[] { 2, 3, 4, 1, 5 }, 3)]
             [InlineData(new int[] { 1, 3, 5, 2, 4, 6, 7 }, 3)]
             public static void ComputesCorrectResponse(int[] arr, int answer)
             {
-                Assert.Equal<int>(Solution.minimumSwaps(arr), answer);
+                Assert.Equal<int>(Solution.minimumSwaps2(arr), answer);
             }
         }
 

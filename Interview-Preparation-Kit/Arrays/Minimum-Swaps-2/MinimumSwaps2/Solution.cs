@@ -8,37 +8,57 @@ namespace MinimumSwaps2
 {
     public class Solution
     {
-        internal static int minimumSwaps(int[] arr)
+        internal static int minimumSwaps2(int[] arr)
         {
-            var arrayLookup = convertArrToDict(arr);
-            var counter = 0;
+            shiftLeft(arr); // so much easier to have the input array indexes match values when sorted
+                            // rather than having -1 in certain places to check if the value matches
+                            // the index
 
-            for (int i = 0; i < arr.Length; i++)
+            var visited = new bool[arr.Length];
+
+            var sortedDict = convertArrToDict(arr); // I suppose it doesn't matter where you start
+                                                    // if you visit each node in the array eventually
+                                                    // but it is kind of nice to go through in increasing
+                                                    // value
+
+                                                    
+
+            int totalCycles = 0;
+
+            foreach(var item in sortedDict)
             {
-                if(arr[i] != i + 1)
+                if(visited[item.Key] || item.Key == item.Value)
                 {
-                    var correctIndex = arrayLookup[i + 1];
-
-                    //swap in the dict
-                    arrayLookup[i + 1] = i;
-                    arrayLookup[arr[i]] = correctIndex;
-
-                    //swap in the array
-                    int temp = arr[i];
-                    arr[i] = arr[correctIndex];
-                    arr[correctIndex] = temp;
-
-                    //increment counter
-                    counter++;
+                    continue;
                 }
+
+                int cycleLength = 0;
+                int indexInCycle = item.Key; // start at current place in the dict
+
+                while (!visited[indexInCycle])
+                {
+                    visited[indexInCycle] = true;
+                    indexInCycle = sortedDict[indexInCycle]; // move to the next node in the cycle
+                    cycleLength += 1;
+                }
+
+                totalCycles += cycleLength - 1;
             }
-            
-            return counter;
+
+            return totalCycles;
         }
 
-        internal static Dictionary<int, int> convertArrToDict(int[] arr)
+        private static void shiftLeft(int[] arr)
         {
-            var result = new Dictionary<int, int>();
+            for(int i = 0; i < arr.Length; i++)
+            {
+                arr[i]--;
+            }
+        }
+
+        internal static SortedDictionary<int, int> convertArrToDict(int[] arr)
+        {
+            var result = new SortedDictionary<int, int>();
 
             for(int i = 0; i < arr.Length; i++)
             {
