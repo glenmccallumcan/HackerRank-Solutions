@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RansomNote", "RansomNote\RansomNote.csproj", "{8D169BB9-82C0-4120-8AFD-6149BC6FD392}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RansomNote.UnitTests", "RansomNote.UnitTests\RansomNote.UnitTests.csproj", "{CF3886C2-98E5-4AEA-BCD5-85E9FA599CB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D169BB9-82C0-4120-8AFD-6149BC6FD392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D169BB9-82C0-4120-8AFD-6149BC6FD392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D169BB9-82C0-4120-8AFD-6149BC6FD392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D169BB9-82C0-4120-8AFD-6149BC6FD392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF3886C2-98E5-4AEA-BCD5-85E9FA599CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF3886C2-98E5-4AEA-BCD5-85E9FA599CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF3886C2-98E5-4AEA-BCD5-85E9FA599CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF3886C2-98E5-4AEA-BCD5-85E9FA599CB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {728026E3-8803-4CFC-B81A-DA9CD151A262}
+	EndGlobalSection
+EndGlobal
