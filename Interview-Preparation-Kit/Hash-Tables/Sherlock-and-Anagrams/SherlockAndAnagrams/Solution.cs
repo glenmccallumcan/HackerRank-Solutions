@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace SherlockAndAnagrams
@@ -12,56 +13,46 @@ namespace SherlockAndAnagrams
                 return 0;
             }
 
-            var counter = 0;
-            
-            for(int i = 1; i < s.Length; i++)
+            var substrings = new Dictionary<string, int>();
+           
+            for(int subLength = 1; subLength < s.Length; subLength++)
             {
-                counter += countAllAnagramsOfLength(s, i);
-            }
-
-            return counter;
-        }
-
-        public static int countAllAnagramsOfLength(string s, int anagramLength)
-        {
-            var index = 0;
-            int counter = 0;
-
-            while(anagramLength != 0 && (index + anagramLength -1) < s.Length)
-            {
-                var sub = s.Substring(index, anagramLength);
-                counter += countAnagramsToRightOf(s, sub, index + 1);
-                index++;
-            }
-            return counter;
-        }
-
-        public static int countAnagramsToRightOf(string s, string sub, int startIndex)
-        {
-            int left = startIndex;
-            int counter = 0;
-
-            while (sub.Length != 0 && left + sub.Length - 1 < s.Length)
-            {
-                if(areAnagrams(sub, s.Substring(left, sub.Length)))
+                int index = 0;
+                
+                while (index + subLength -1 < s.Length)
                 {
-                    counter++;
-                }
+                    var sub = new string(s.Substring(index, subLength).ToCharArray().OrderBy(c => c).ToArray());
 
-                left++;
+                    if(!substrings.ContainsKey(sub))
+                    {
+                        substrings.Add(sub, 0);
+                    }
+
+                    substrings[sub] = substrings[sub] + 1;
+
+                    index++;
+                }
             }
 
-            return counter;
+            Dictionary<string, int> anagrams = substrings.Where(pair => pair.Value > 1).ToDictionary(pair => pair.Key, pair => pair.Value);
+
+            int sum = 0;
+            foreach (var a in anagrams)
+            {
+                sum += unchecked((int)(factorial(a.Value) / (factorial(a.Value - 2)*factorial(2))));
+            }
+
+            return sum;
         }
 
-        public static bool areAnagrams(string left, string right)
+        private static long factorial(int input)
         {
-            if(left.ToCharArray().OrderBy(c => c).SequenceEqual(right.ToCharArray().OrderBy(c => c)))
-            {
-                return true;
-            }
+            long i;
+            long ans = 1;
 
-            return false;
+            for (i = 2; i <= input; i++)
+                ans *= i;
+            return ans;
         }
     }
 }
