@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 
 namespace SherlockAndAnagrams
 {
@@ -36,19 +37,19 @@ namespace SherlockAndAnagrams
 
             Dictionary<string, int> anagrams = substrings.Where(pair => pair.Value > 1).ToDictionary(pair => pair.Key, pair => pair.Value);
 
-            int sum = 0;
+            BigInteger sum = 0;
             foreach (var a in anagrams)
             {
-                sum += unchecked((int)(factorial(a.Value) / (factorial(a.Value - 2)*factorial(2))));
+                sum +=factorial(a.Value) / (factorial(a.Value - 2)*factorial(2));
             }
 
-            return sum;
+            return (int)sum;
         }
 
-        private static long factorial(int input)
+        private static BigInteger factorial(int input)
         {
             long i;
-            long ans = 1;
+            BigInteger ans = 1;
 
             for (i = 2; i <= input; i++)
                 ans *= i;
