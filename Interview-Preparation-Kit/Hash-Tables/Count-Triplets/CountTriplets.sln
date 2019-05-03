@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountTriplets", "CountTriplets\CountTriplets.csproj", "{70D92990-8992-4257-A5BD-31402282DCD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountTriplets.UnitTests", "CountTriplets.UnitTests\CountTriplets.UnitTests.csproj", "{6799214B-9660-492D-9F37-DA1099B25009}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70D92990-8992-4257-A5BD-31402282DCD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70D92990-8992-4257-A5BD-31402282DCD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70D92990-8992-4257-A5BD-31402282DCD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70D92990-8992-4257-A5BD-31402282DCD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6799214B-9660-492D-9F37-DA1099B25009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6799214B-9660-492D-9F37-DA1099B25009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6799214B-9660-492D-9F37-DA1099B25009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6799214B-9660-492D-9F37-DA1099B25009}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E35177D-F3FC-4BA7-8DF4-4320892E07E2}
+	EndGlobalSection
+EndGlobal
